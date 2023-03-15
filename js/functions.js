@@ -38,13 +38,14 @@ console.log(helloMessage);
  * console.
  */
 var myName = ["Tim"];
-sayHello(myName);
+console.log(myName);
 
 
 //Don't modify the following line, it generates a random number between 1 and 3
 //and stores it in a variable named random
 
 var random = Math.floor((Math.random() * 3) + 1);
+console.log(random);
 
 /**
  * TODO:
@@ -67,6 +68,7 @@ function isTwo(num) {
     return num === 2;
 }
 console.log(isTwo(random));
+
 
 /**
  * TODO:
@@ -116,6 +118,7 @@ console.log(typeof calcTip);
 
 function applyDiscount (price, discount) {
     var discountAmt = discount * price;
+    console.log(discountAmt);
     return price - discountAmt;
 }
 
