@@ -70,6 +70,16 @@ var isNotExpired = todayDate < expirationDate
 var offerApplied = itemsForOffer && isNotExpired || premium && isNotExpired
 alert("Offer Status: " +offerApplied)
 
+// password example
+var username = "codeup";
+var password = "notastrongpassword";
+var passwordCharCount = password.lenght >= 5;
+var usernameNotInPassword = passwordCharCount = password.IndexOf(username) === -1;
+
+var noUserName = !password.includes(username);
+var userNameNotaParagraph = username.length <= 20
+
+
 
 
 
