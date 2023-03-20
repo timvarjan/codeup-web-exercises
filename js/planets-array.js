@@ -31,10 +31,10 @@ var doneItem = planets.pop("Pluto");
     console.log(planets);
 var index = planets.indexOf('Earth');
     console.log('Finding and logging the index of "Earth" in the planets array.');
-
+planets.reverse();
     console.log("Reversing the order of the planets array.");
     console.log(planets);
-
+planets.sort();
     console.log("Sorting the planets array.");
     console.log(planets);
 })();
