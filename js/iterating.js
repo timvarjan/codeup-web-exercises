@@ -50,7 +50,8 @@ for(var i = 0; i < names.length; i++){
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-function first(arr){
+var numbers = ["1", "2", "3", "4", "5"]
+    function first(arr){
     return arr[0];
     }
     console.log(first(numbers));
