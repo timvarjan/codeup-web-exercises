@@ -12,17 +12,17 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-//     var person = {}
-//         person.firstName = "Tim";
-//         person.lastName = "Varjan";
-//
-//     person.logFirstNameLastName = function() {
-//             console.log("Hello from " + this.firstName + " " + this.lastName + "!!!");
-//         };
-//
-// console.log(person.firstName);
-//     console.log(person.lastName);
-//     person.logFirstNameLastName();
+    var person = {}
+        person.firstName = "Tim";
+        person.lastName = "Varjan";
+
+    person.logFirstNameLastName = function() {
+            console.log("Hello from " + this.firstName + " " + this.lastName + "!!!");
+        };
+
+console.log(person.firstName);
+    console.log(person.lastName);
+    person.logFirstNameLastName();
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -47,23 +47,23 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    // var discount = .12
-    //
-    //
-    // shoppers.forEach(function(shopper){
-    //    if (shopper.amount > 200) {
-    //        var discountTotal = shopper.amount - (shopper.amount * discount);
-    //        console.log(shopper.name + " spent $" + shopper.amount + " pays $" + discountTotal + " after discount.");
-    //    } else {
-    //        console.log(shopper.name + " spent $" + shopper.amount + " and gets no discount.");
-    //    }
-    //
-    // })
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    var discount = .12
+
+
+    shoppers.forEach(function(shopper){
+       if (shopper.amount >= 200) {
+           var discountTotal = shopper.amount - (shopper.amount * discount);
+           console.log(shopper.name + " spent $" + shopper.amount + " pays $" + discountTotal + " after discount.");
+       } else {
+           console.log(shopper.name + " spent $" + shopper.amount + " and gets no discount.");
+       }
+
+    })
 
 
 
@@ -90,7 +90,7 @@ var books = [
           }
         },
         {
-            title: "Se Quiser Mudar O mundo",
+            title: "Se Quiser Mudar O Mundo",
             author: {
                 firstName: 'Sabrina',
                 lastName: 'Fernandes'
@@ -146,12 +146,16 @@ var books = [
      *      ---
      *      ...
      */
-    books.forEach((book, i) => {
-            console.log(`Book # ${i + 1}`)
-            console.log(`Title: ${book.title}`)
-            console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
-            console.log('---')
-        })
+    // books.forEach((book, i) => {
+    //         console.log(`Book # ${i + 1}`)
+    //         console.log(`Title: ${book.title}`)
+    //         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
+    //         console.log('---')
+    //     })
+
+    for(var i = 0; i < books.lenght; i++){
+        showBooksInfo(books[i]);
+    }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -162,5 +166,19 @@ var books = [
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+function createBoook(title, author){
 
+    return{
+        title: title,
+        author: author,
+    }
+}
+consle.log(books)
+
+    function showBookInfo(){
+        console.log("Book # " + (i+1));
+        console.log("Title: " + books[i].title);
+        console.log("Author " + books[i].author.firstName + " " + books[i].author.lastName);
+        console.log('---')
+    }
 })();
