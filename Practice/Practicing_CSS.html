@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice CSS from Slack 3/24</title>
+    <link rel="stylesheet" href="css/intro-to-css.css">
+    <style>
+        .fancy-header {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+CSS Practice
+
+// h1 should be green
+// all h4s should be red
+// all text inside of buttons should be 24px in size
+// at least 1 paragraph should have a dotted blue border
+// the second list item should have a background color of yellow
+// all list items should have a font size of 30px;
+// the form should have a black background and change all the text inside of the form to white to make it legible
+// round the edges to all buttons and give them a solid red border
+-->
+
+<h1 class="fancy-header">Hello Cerberus</h1>
+
+<p style="border-block: 4px dotted blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto assumenda commodi, consequatur distinctio enim esse fugiat mollitia nobis obcaecati odio quis quisquam sed unde.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus error expedita facere ipsam itaque numquam obcaecati quisquam temporibus? Blanditiis dolorem incidunt quos tempore voluptatum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus error expedita facere ipsam itaque numquam obcaecati quisquam temporibus? Blanditiis dolorem incidunt quos tempore voluptatum.</p>
+
+<h4 style="color: red">grocery list</h4>
+<ul>
+    <li style="font-size: 30px">apples</li>
+    <li style="background-color: yellow; font-size: 30px">bananas</li>
+    <li style="font-size: 30px">celery</li>
+</ul>
+
+<button style="font-size: 24px; border-color: red; border-radius: 12px;">click here!</button>
+
+<form>
+    <style>
+        form {background-color: black;
+            color: white}
+    </style>
+    <h4 style="color: red">Sign Up Now!</h4>
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+
+    <input style="font-size: 24px; border-color: red; border-radius: 12px;" type="submit">
+</form>
+
+</body>
+</html>
