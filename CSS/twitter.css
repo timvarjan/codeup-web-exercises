@@ -114,9 +114,12 @@ a {
 .text-muted {
     color: var(--main-link-color);
 }
+
+
 .container {
     margin: 2em 0;
 }
+
 
 .media {
     width: 100%;
