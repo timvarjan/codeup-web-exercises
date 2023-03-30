@@ -43,6 +43,7 @@ h2, h3 {
     margin: 0 auto;
 
 
+
     /* enter needed declarations here */
 }
 
@@ -50,6 +51,8 @@ section {
     display: flex;
     margin-bottom: 1.5em;
     /* enter needed declarations here */
+    display: flex;
+    justify-content: center;
 }
 
 section:nth-of-type(1) {
@@ -58,8 +61,7 @@ section:nth-of-type(1) {
 
     /* enter needed declarations here */
 
-    justify-content: space-between;
-    align-items: center;
+
 
 }
 
