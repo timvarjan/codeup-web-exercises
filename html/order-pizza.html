@@ -56,89 +56,156 @@
     <div class="jumbotron d-flex align-items-center">
         <div class="h2 p-3 mb-2 bg-white bg-opacity-75 text-dark text-center container">Welcome to Pizza World!</div>
     </div>
-</div>
+
 
 <h2>Build your own pizza!</h2>
 <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="navigation">
-        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#size-tab" type="button"
-                role="tab" aria-controls="size-tab" aria-selected="true"><span class="badge rounded-pill bg-secondary">1</span>Size and Crust</button>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
     </li>
-    <li class="nav-link" role="navigation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#cheese-tab" type="button"
-                role="tab" aria-controls="cheese-tab" aria-selected="false"><span class="badge rounded-pill bg-secondary">2</span>Cheese and Sauce</button>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
     </li>
-    <li class="nav-link" role="navigation">
-        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#toppings-tab" type="button"
-                role="tab" aria-controls="toppings-tab" aria-selected="false"><span class="badge rounded-pill bg-secondary">3</span>Toppings 🙃</button>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">Choose Size and Crust</div>
-    <div class="tab-pane fade" id="profile" role="tabpane" aria-labelledby="cheese-tab">Choose Cheese and Sauce</div>
-    <div class="tab-pane fade" id="contact" role="tabpane" aria-labelledby="toppings-tab">Choose Toppings</div>
-</div>
-<div class="card">
-    <div class="card-title">
-        Hand Tossed
+<!--    Size tab-->
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Choose Size and Crust
+            </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+                    <div class="card-body m-2">
+                        <ul class="list-group">
+                            <li class="list-group-item b-2">Garlic seasoned crust with a rich buttery taste.</li>
+                            <li class="list-group-item b-2">
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                                Small (10")
+                            </li>
+                            <li class="list-group-item b-2">
+                                <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                                Medium (12")
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            Crispy Thin
+                        </div>
+                        <div class="card-body m-2">
+                            <ul class="list-group">
+                                <li class="list-group-item b-2">Thin enough for optimum crispy to crunchy ratio.</li>
+                                <li class="list-group-item b-2">
+                                    <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                                    Medium (12")
+                                </li>
+                                <li class="list-group-item b-2">
+                                    <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                                    Large (14")
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+<!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+        <!--<div class="card">-->
+        <!--    <div class="card-title">-->
+        <!--        Hand Tossed-->
+        <!--    </div>-->
+        <!--    <ul class="list-group">-->
+        <!--        <li class="list-group-item"> Garlic seasoned crust with a rich, buttery taste</li>-->
+        <!--        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="size-tab" disabled>-->
+        <!--            <label class="form-check-label" for="flexCheckDisabled">-->
+        <!--            </label>Small ("10")</li>-->
+        <!--        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="size" disabled>-->
+        <!--            <label class="form-check-label" for="flexCheckDisabled">-->
+        <!--            </label>Medium ("12")</li>-->
+        <!--    </ul>-->
+        <!--</div>-->
+        <!--    <br>-->
+        <!--    <div class="card">-->
+        <!--    <div class="card-title">-->
+        <!--        Crispy Thin-->
+        <!--    </div>-->
+        <!--    <ul class="list-group">-->
+        <!--        <li class="list-group-item"> Thin enough for optimum crispy to crunchy ratio</li>-->
+        <!--        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="cheese" disabled>-->
+        <!--            <label class="form-check-label" for="flexCheckDisabled">-->
+        <!--            </label>Small ("10")</li>-->
+        <!--        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="cheese" disabled>-->
+        <!--            <label class="form-check-label" for="flexCheckDisabled">-->
+        <!--            </label>Medium ("12")</li>-->
+        <!--    </ul>-->
+        <!--</div>-->
     </div>
-    <ul class="list-group">
-        <li class="list-group-item"> Garlic seasoned crust with a rich, buttery taste</li>
-        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="size-tab" disabled>
-            <label class="form-check-label" for="flexCheckDisabled">
-            </label>Small ("10")</li>
-        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="size" disabled>
-            <label class="form-check-label" for="flexCheckDisabled">
-            </label>Medium ("12")</li>
-    </ul>
+<!--   cheese tab -->
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">2</div>
+<!--    topping tab-->
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">3</div>
 </div>
-    <br>
-    <div class="card">
-    <div class="card-title">
-        Crispy Thin
-    </div>
-    <ul class="list-group">
-        <li class="list-group-item"> Thin enough for optimum crispy to crunchy ratio</li>
-        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="cheese" disabled>
-            <label class="form-check-label" for="flexCheckDisabled">
-            </label>Small ("10")</li>
-        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="cheese" disabled>
-            <label class="form-check-label" for="flexCheckDisabled">
-            </label>Medium ("12")</li>
-    </ul>
-</div>
+<!--<ul class="nav nav-tabs" id="myTab" role="tablist">-->
+<!--    <li class="nav-item" role="navigation">-->
+<!--        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#size-tab" type="button"-->
+<!--                role="tab" aria-controls="size-tab" aria-selected="true"><span class="badge rounded-pill bg-secondary">1</span>Size and Crust</button>-->
+<!--    </li>-->
 
-<div class="card">
-    <div class="card-title">
-        Hand Tossed
-    </div>
-    <ul class="list-group">
-        <li class="list-group-item"> Garlic seasoned crust with a rich, buttery taste</li>
-        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="2" id="cheese" disabled>
-            <label class="form-check-label" for="flexCheckDisabled">
-            </label>Small ("10")</li>
-        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="cheese" disabled>
-            <label class="form-check-label" for="flexCheckDisabled">
-            </label>Medium ("12")</li>
-    </ul>
-</div>
-<br>
-<div class="card">
-    <div class="card-title">
-        Crispy Thin
-    </div>
-    <ul class="list-group">
-        <li class="list-group-item"> Thin enough for optimum crispy to crunchy ratio</li>
-        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="size" disabled>
-            <label class="form-check-label" for="flexCheckDisabled">
-            </label>Small ("10")</li>
-        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="size" disabled>
-            <label class="form-check-label" for="flexCheckDisabled">
-            </label>Medium ("12")</li>
-    </ul>
-</div>
+<!--    <li class="nav-link" role="navigation">-->
+<!--        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#cheese-tab" type="button"-->
+<!--                role="tab" aria-controls="cheese-tab" aria-selected="false"><span class="badge rounded-pill bg-secondary">2</span>Cheese and Sauce</button>-->
+<!--    </li>-->
+<!--    <li class="nav-link" role="navigation">-->
+<!--        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#toppings-tab" type="button"-->
+<!--                role="tab" aria-controls="toppings-tab" aria-selected="false"><span class="badge rounded-pill bg-secondary">3</span>Toppings 🙃</button>-->
+<!--    </li>-->
+<!--</ul>-->
+<!--<div class="tab-content" id="myTabContent">-->
+<!--    <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">Choose Size and Crust</div>-->
+<!--    <div class="tab-pane fade" id="profile" role="tabpane" aria-labelledby="cheese-tab">Choose Cheese and Sauce</div>-->
+<!--    <div class="tab-pane fade" id="contact" role="tabpane" aria-labelledby="toppings-tab">Choose Toppings</div>-->
+<!--</div>-->
+<!--<div class="card">-->
+<!--    <div class="card-title">-->
+<!--        Hand Tossed-->
+<!--    </div>-->
+<!--    <ul class="list-group">-->
+<!--        <li class="list-group-item"> Garlic seasoned crust with a rich, buttery taste</li>-->
+<!--        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="size-tab" disabled>-->
+<!--            <label class="form-check-label" for="flexCheckDisabled">-->
+<!--            </label>Small ("10")</li>-->
+<!--        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="size" disabled>-->
+<!--            <label class="form-check-label" for="flexCheckDisabled">-->
+<!--            </label>Medium ("12")</li>-->
+<!--    </ul>-->
+<!--</div>-->
+<!--    <br>-->
+<!--    <div class="card">-->
+<!--    <div class="card-title">-->
+<!--        Crispy Thin-->
+<!--    </div>-->
+<!--    <ul class="list-group">-->
+<!--        <li class="list-group-item"> Thin enough for optimum crispy to crunchy ratio</li>-->
+<!--        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="cheese" disabled>-->
+<!--            <label class="form-check-label" for="flexCheckDisabled">-->
+<!--            </label>Small ("10")</li>-->
+<!--        <li class="list-group-item"> <input class="form-check-input" type="checkbox" value="" id="cheese" disabled>-->
+<!--            <label class="form-check-label" for="flexCheckDisabled">-->
+<!--            </label>Medium ("12")</li>-->
+<!--    </ul>-->
+<!--</div>-->
 
 
+
+</div>
 
 <!-- Main page content -->
 
