@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+nav {
+    background: #333333;
+    height: 50px;
+}
+
+/*ul {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    display: flex;*/
+
+
+
+/*}*/
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: "Al Nile";
+
+
+
+}
+nav a:hover {
+    background: blue;
+
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    gap: 0;
+
+
+
+}
+.references {
+    list-style: none;
+    display: inline-block;
+    flex-direction: column;
+   justify-content: flex-end;
+    position: relative;
+    align-items: flex-end;
+
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
