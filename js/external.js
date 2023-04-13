@@ -65,7 +65,7 @@ var premium = confirm("Are you a premium member?")
 var items = prompt("How many items are you purchasing?")
 var itemsForOffer = items > 2
 var expirationDate = 15
-var todayDate = prompt("What is today\'s date. Numbers only')
+var todayDate = prompt("What is today\'s date. Numbers only")
 var isNotExpired = todayDate < expirationDate
 var offerApplied = itemsForOffer && isNotExpired || premium && isNotExpired
 alert("Offer Status: " +offerApplied)
