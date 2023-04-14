@@ -26,6 +26,11 @@
   culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">Click Here!</button>
+<button id="btn2">Click Here!</button>
+<button id="btn3">Click Here!</button>
+<button id="btn4">Click Here!</button>
+
 <script>
   (function() {
     "use strict";
@@ -35,7 +40,10 @@
 
     // TODO: Set inner html of mainHeader to "JavaScript is Cool"
     console.log(mainHeader.innerHTML);
-    mainHeader.innerHTML = "JavaScript is Cool"
+    var listener = function (event) {
+      mainHeader.innerHTML = "JavaScript is Cool";
+    }
+    document.getElementById('btn1').addEventListener('click', listener);
     console.log(mainHeader.innerHTML);
 
     // TODO: Uncomment the next line and get the sub header element by id
@@ -43,7 +51,11 @@
     console.log(subHeader);
 
     // TODO: Set the text color of subHeader to blue
-    subHeader.style.color = 'blue';
+    var listener = function (event) {
+      subHeader.style.color = 'blue';
+    }
+    document.getElementById('btn2').addEventListener('click', listener);
+
 
     // TODO: Uncomment the next line and get all list items
     var listItems = document.getElementsByTagName ('li');
@@ -55,29 +67,39 @@
 
     // TODO: Set text color on every other list item to grey
     // TODO: Set text color of li with dbid = 1 to blue
-    var oneDbid = listItems[0].getAttribute('data-dbid');
-    console.log(oneDbid);
+    var listener = function (event) {
+      var oneDbid = listItems[0].getAttribute('data-dbid');
+      console.log(oneDbid);
 
-    for (var i = 0; i < listItems.length; i++) {
+      for (var i = 0; i < listItems.length; i++) {
 
-      if (listItems[i].getAttribute('data-dbid') == 1) {
+        if (listItems[i].getAttribute('data-dbid') == 1) {
 
-        listItems[i].style.color = 'blue';
+          listItems[i].style.color = 'blue';
 
-      } else if (i % 2 == 0) {
+        } else if (i % 2 == 0) {
 
-        listItems[i].style.color = 'grey';
+          listItems[i].style.color = 'grey';
+        }
+        console.log(listItems[i].getAttribute('data-dbid'));
       }
-      console.log(listItems[i].getAttribute('data-dbid'));
     }
-
+    document.getElementById('btn3').addEventListener('click', listener);
 
     // TODO: Uncomment the next line and get all elements with class name sub-paragraph
     var subParagraphs = document.getElementsByClassName("sub-paragraph");
     console.log(subParagraphs);
 
     // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-    subParagraphs[0].innerHTML = 'Mission Accomplished!'
+    var listener = function (event) {
+      subParagraphs[0].innerHTML = 'Mission Accomplished!'
+    }
+    document.getElementById('btn4').addEventListener('click', listener);
+
+    //Button Listener Events
+
+
+
 
   })();
 </script>
