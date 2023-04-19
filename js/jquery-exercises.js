@@ -13,4 +13,4 @@
 $("li").css('font-size', '20px');
 $("h1, li, p").css('background-color', 'orange')
 var contents = $('h1').html();
-// alert(contents);
+alert(contents);
