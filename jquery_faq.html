@@ -11,6 +11,9 @@
         .highlight {
             background-color: darkorange;
         }
+        .highlight-1 {
+            background-color: dodgerblue;
+        }
     </style>
 
 </head>
@@ -112,6 +115,11 @@
         $('dt').click((e) => {
             const target = e.target
             $(target).toggleClass('highlight')
+        });
+        // Highlight the faq answers when clicked
+        $('dd').click((e) => {
+            const target = e.target
+            $(target).toggleClass('highlight-1')
         });
         // Make everything under an H3 bold
         $('h3').on('click', function(){
