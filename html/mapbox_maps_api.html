@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Restaurants MapBox Exercise</title>
+  <meta name="viewport" content="initial-scale=10,maximum-scale=5,user-scalable=no">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+
+<div id='map' style='width: 100%; height: 750px;'></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoidGltdmFyamFuIiwiYSI6ImNsZ3kzeWJwejA1bHEzZ280bzV1cmVtMmQifQ.NDbFNIeImQiit2w-pPyNuw';
+  const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
+    center: [-88.15232981534209, 41.88740044950921], // starting position [lng, lat]
+    zoom: 2, // starting zoom
+
+
+  });
+  // Add zoom and rotation controls to the map.
+  map.addControl(new mapboxgl.NavigationControl());
+
+
+  const marker1 = new mapboxgl.Marker()
+          .setLngLat([14.49716, 40.63115])
+          .setPopup(new mapboxgl.Popup().setHTML("<h1>La Tagliatatta Ristorante</h1><p>Fine Italian Dining, Amazing Views, Unlimited House Wine</p>")) // add popup
+          .addTo(map);
+
+  const marker2 = new mapboxgl.Marker()
+          .setLngLat([114.18638, 22.27940])
+          .setPopup(new mapboxgl.Popup().setHTML("<h1>Din Tai Fung</h1><p>Michelin Star Rated Tawainese Style Dumplings</p>")) // add popup
+          .addTo(map);
+
+  const marker3 = new mapboxgl.Marker()
+          .setLngLat([-46.68016831771973, -23.563615462939865])
+          .setPopup(new mapboxgl.Popup().setHTML("<h1>Cozinha 212</h1><p>Amazing oysters and cocktails! #tatisabe</p>")) // add popup
+          .addTo(map);
+
+  const marker4 = new mapboxgl.Marker()
+          .setLngLat([-115.24078727052789, 36.12744085992333])
+          .setPopup(new mapboxgl.Popup().setHTML("<h1>Chef Kenny's</h1><p>You won't believe this is vegan food!</p>")) // add popup
+          .addTo(map);
+
+  const marker5 = new mapboxgl.Marker()
+          .setLngLat([-88.15232981534209, 41.88740044950921])
+          .setPopup(new mapboxgl.Popup().setHTML("<h1>Tony's Steamers</h1><p>Best Hot Dogs Ever!</p>")) // add popup
+          .addTo(map);
+
+  const search = new MapboxSearchBox();
+  search.accessToken = 'pk.eyJ1IjoidGltdmFyamFuIiwiYSI6ImNsZ3kzeWJwejA1bHEzZ280bzV1cmVtMmQifQ.NDbFNIeImQiit2w-pPyNuw';
+  map.addControl(search);
+
+
+
+
+
+</script>
+
+</body>
+</html>
