@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Hammer",
+    "quantity": 25,
+    "categories": [
+      "Tool"
+    ],
+    "price": 20
+  }, {
+  "title": "Drill",
+  "quantity": 5,
+  "categories": [
+    "Tool",
+    " Powered"
+  ],
+  "price": 100
+}, {
+  "title": "Mower",
+  "quantity": 5,
+  "categories": [
+    "Tool",
+    " Gas",
+    " Outdoor"
+  ],
+  "price": 200
+}, {
+  "title": "Screwdrivers",
+  "quantity": 25,
+  "categories": [
+    "Tool"
+  ],
+  "price": 10
+}, {
+  "title": "Deck Nails Box of 500",
+  "quantity": 125,
+  "categories": [
+    "Hardware"
+  ],
+  "price": 14.99
+}
+]
