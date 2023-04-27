@@ -14,6 +14,7 @@
     </style>
 </head>
 <body>
+<h1>Tim's Favorite Restaurants</h1>
 <!--<select id="zoom-select">-->
 <!--  <option selected disabled>Zoom Level</option>-->
 <!--  <option value="5">Zoom Level 5</option>-->
@@ -22,20 +23,25 @@
 <!--  <option value="20">Zoom Level 20</option>-->
 <!--</select>-->
 
-<div id='map' style='width: 100%; height: 750px;'></div>
+<div id='map' style='width: 100%; height: 750px; margin-top: 10em;'></div>
+<button id="remove">Clear Restaurants</button>
 <script>
   "use strict";
+
+  //Creation of the basic map ⏬⏬⏬🚨
   mapboxgl.accessToken = 'pk.eyJ1IjoidGltdmFyamFuIiwiYSI6ImNsZ3kzeWJwejA1bHEzZ280bzV1cmVtMmQifQ.NDbFNIeImQiit2w-pPyNuw';
   const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
     center: [-88.15232981534209, 41.88740044950921], // starting position [lng, lat]
     zoom: 2, // starting zoom
-
-
   });
-  // Add zoom and rotation controls to the map.
+
+
+  // Add zoom and rotation controls to the map ⏬⏬⏬🚨
   map.addControl(new mapboxgl.NavigationControl());
+
+  //Set location markers using constants ⏬⏬⏬🚨
 
 
   // const marker1 = new mapboxgl.Marker()
@@ -63,7 +69,7 @@
   //         .setPopup(new mapboxgl.Popup().setHTML("<h1>Tony's Steamers</h1><p>Best Hot Dogs Ever!</p>")) // add popup
   //         .addTo(map);
 
-  // Attempting ForEach loop to make markers display //
+  //  ForEach loop to make markers display ⏬⏬⏬🚨//
 
   const restaurants = [
     {
@@ -71,35 +77,36 @@
       foodType: "Fine Italian Dining, Amazing Views, Unlimited House Wine",
       location: [14.49716, 40.63115],
       priceRange: "$$$",
-      marker:'',
-      popup:''
+      // marker:'',
+      // popup:''
     },
     {
       name: "Din Tai Fung",
       foodType: "Michelin Star Rated Taiwanese Style Dumplings",
       location: [114.18638, 22.27940],
       priceRange: "$$$$",
-      marker:'',
-      popup:''
+      // marker:'',
+      // popup:''
     },
     {
       name: "Cozinha 212",
       foodType: "Amazing oysters and cocktails! #tatisabe",
       location: [-46.68016831771973, -23.563615462939865],
       priceRange: "$$",
-      marker:'',
-      popup:''
+      // marker:'',
+      // popup:''
     },
     {
       name: "Tony's Steamers",
       foodType: "Best Hot Dogs Ever!",
       location: [ -88.15232981534209, 41.88740044950921],
       priceRange: "$",
-      marker: '',
-      popup: ''
+      // marker: '',
+      // popup: ''
     },
   ];
 
+  //function to apply info from const=restaurants ⏬⏬⏬🚨
  function createMarkers(){
    restaurants.forEach(function (restaurant){
      restaurant.marker = new mapboxgl.Marker()
@@ -107,12 +114,24 @@
              .addTo(map);
 
      restaurant.popup = new mapboxgl.Popup()
-             .setHTML("<h5>" + restaurant.name + "</h5><p>" + restaurant.foodType + "</p><p>" + restaurant.priceRange + "</p>")
+             .setHTML("<h3>" + restaurant.name + "</h3><p>" + restaurant.foodType + "</p><p>" + "Price Range: " + restaurant.priceRange + "</p>")
 
      restaurant.marker.setPopup(restaurant.popup);
+
+
    })
  }
   createMarkers(restaurants, map);
+
+  // //Function for button functionality ⏬⏬⏬🚨
+  // document.getElementById('removeMarkers').addEventListener('click', function(){
+  //     if(confirm("Are you sure you want to clear the map?")){
+  //         createMarkers.remove()
+  //         console.log('map cleared ')
+  //     }
+  // })
+
+
 
 </script>
 
