@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- Custom CSS -->
+  <style>
+    #map {
+      /* the width and height may be set to any size */
+      width: 100%;
+      height: 700px;
+    }
+    a {
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+<h1>My First Mapbox Map!</h1>
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+<!-- Custom JS -->
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoidGltdmFyamFuIiwiYSI6ImNsZ3kzeWJwejA1bHEzZ280bzV1cmVtMmQifQ.NDbFNIeImQiit2w-pPyNuw';;
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: "mapbox://styles/crystal-thibodeau/ck4aas95r0xvy1cnwghfstjon",
+    zoom: 8,
+    center: [-98.4916, 29.4252]
+  });
+  map.addControl(new mapboxgl.NavigationControl());
+  var markerOptions = {
+    color: "darkred",
+    draggable: false
+  };
+  geocode("109 Saunders St, Boerne, TX 78006", mapboxToken).then(function(result) {
+
+      var hungryHorsePopUp = new mapboxgl.Popup({closeOnClick: true})
+          .setText(
+              'Hungry Horse Restaurant' );
+          // .setLngLat(result);
+          // .setHTML('<h1>Hello World!</h1>');
+
+
+      var HungryHorseMarker = new mapboxgl.Marker(markerOptions)
+          .setLngLat(result)
+          .setPopup(hungryHorsePopUp)
+          .addTo(map);
+      map.setCenter(result);
+      map.setZoom(18);
+      hungryHorsePopUp;
+  });
+
+
+  var restaurants = [
+    {
+      name: "Hungry Horse",
+      location: "109 Saunders St, Boerne, TX 78006",
+      foodType: "American cuisine",
+      atmosphere: "Family friendly, Quaint",
+      priceAverage: "Average",
+      popupHTML: "<a href=\http://www.hungryhorsehillcountry.com/menu.html\"><b>MENU</b></a>"
+    },
+    {
+      name: "China Bowl",
+      location: "1361 S Main St Suite 301, Boerne, TX 78006",
+      foodType: "Chinese cuisine",
+      atmosphere: "Family friendly, Intimate",
+      priceAverage: "Low",
+      popupHTML: "<a href=\https://www.zomato.com/boerne-tx/china-bowl-boerne\"><b>MENU</b></a>"
+    },
+    {
+      name: "<b>El Chaparral</b>",
+      location: "15103 Bandera Rd, Helotes, TX 78023",
+      foodType: "Mexican cuisine",
+      atmosphere: "Family friendly, Open",
+      priceAverage: "Low-Average",
+      popupHTML: "<a href=\https://www.elchaparral.com/menus/#page0\"><b>MENU</b></a>"
+    }
+  ];
+  function restaurantMarkerAndPopup(restaurant, mapboxToken, map) {
+    restaurants.forEach(function (restaurant) {
+      geocode(restaurant.location, mapboxToken).then(function (result) {
+        var restaurantPopUp = new mapboxgl.Popup({closeOnClick: true})
+                .setHTML("<b>" + restaurant.name + "</b>" + "<br>" + restaurant.foodType + "<br>" + "Price Range: " + restaurant.priceAverage + "<br>" + restaurant.atmosphere + "<br>" + restaurant.popupHTML );
+        var restaurantMarker = new mapboxgl.Marker(markerOptions)
+                .setLngLat(result)
+                .addTo(map)
+                .setPopup(restaurantPopUp);
+        restaurantMarker;
+      });
+    });
+
+  }
+
+  restaurantMarkerAndPopup(restaurants, mapboxToken, map)
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
