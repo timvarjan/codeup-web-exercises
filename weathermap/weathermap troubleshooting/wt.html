@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <!--  Required Meta Tags -->
     <meta charset="utf-8">
@@ -29,56 +29,38 @@
     <!--jQuery Source Code-->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
-
-
 </head>
 <body>
 
-<!--Start Content-->
-
-
-<!--NAVBAR HERE-->
+<!--Start Body-->
+<!--NAVBAR-->
 
 <section id="navbar">
-    <nav class="navbar navbar-light navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">Weather Map
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#supportedContent"
-                    aria-controls="#supportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" tabindex="-1" id="supportedContent"
-                 aria-labelledby="supportedContent">
-
-            </div>
+            <div id="city">Current Location </div>
         </div>
     </nav>
 </section>
 
-
+<!--BACKGROUND for CSS-->
 <div class="background">
-    <br>
 
     <!--SEARCH BAR/BUTTON HERE-->
     <div id="geocoder" class="geocoder">
         <label for="search-box"></label>
-        <input type="text" placeholder="Enter a location" id="search-box">
+        <input type="text" placeholder="Search" id="search-box">
         <button id="search-btn" type="submit">Search</button>
     </div>
 
-    <br>
-
-    <h3 class="location" id="location-head"></h3>
-
-    <!--WEATHER CARDS HERE-->
+    <!--WEATHER INFO POPULATED BY JS-->
     <div id="weather"></div>
 
-    <br>
+    <!--MAP Placement-->
     <div id='map'></div>
+
 </div>
-<!--MAP HERE-->
-<!--<div id='map'></div>-->
+
 
 <!--End Content-->
 
